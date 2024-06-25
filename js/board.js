@@ -211,7 +211,7 @@ function removeHighlight(id) {
 function closeCardModal(id) {
     document.getElementById(id).classList.add("d-none");
     document.getElementById('hidden-overflow').classList.remove('height100');
-    document.body.style.overflow = "";
+    document.getElementById("hidden-overflow").style.overflow = "scroll";
 }
 
 /**
@@ -317,9 +317,9 @@ async function loadAddTaskTemplate(progress) {
 }
 
 function closeEditCardModal(id) {
-    document.body.style.overflow = "";
     openCardModal(id);
     document.getElementById('cardModal-container').classList.add("d-none");
+    document.getElementById("hidden-overflow").style.overflow = "scroll";
 }
 
 /**
